@@ -1,0 +1,61 @@
+# ── Virtual Environment ──────────────────────────────────────────
+venv/
+.venv/
+env/
+ENV/
+
+# ── Python Cache ─────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+
+# ── YOLO / ML Model Weights (large files, auto-downloaded) ───────
+*.pt
+*.pth
+*.weights
+*.onnx
+*.engine
+
+# ── Video / Image files ──────────────────────────────────────────
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.jpg
+*.jpeg
+*.png
+*.gif
+
+# ── Database & Secrets ───────────────────────────────────────────
+.env
+*.env
+*.db
+*.sqlite3
+config.ini
+secrets.py
+
+# ── PDF Reports (generated at runtime) ───────────────────────────
+*.pdf
+reports/
+
+# ── Logs ─────────────────────────────────────────────────────────
+*.log
+logs/
+
+# ── OS Files ─────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── IDE / Editor ─────────────────────────────────────────────────
+.vscode/
+.idea/
+*.suo
+*.user
+
+# ── Build / Dist ─────────────────────────────────────────────────
+build/
+dist/
+*.egg-info/

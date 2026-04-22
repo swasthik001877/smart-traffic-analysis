@@ -1,0 +1,22 @@
+# Smart Traffic Analysis System — All dependencies
+# Run: pip install -r requirements_gui.txt
+
+# GUI & image display
+Pillow>=10.0.0
+
+# Computer vision + YOLO detection
+opencv-python>=4.8.0
+numpy>=1.24.0
+
+# Database
+psycopg2-binary>=2.9.6
+
+# Charts + PDF report
+matplotlib>=3.7.0
+
+# YouTube live stream support
+yt-dlp>=2024.1.0
+
+# Utilities
+python-dotenv>=1.0.0
+tqdm>=4.65.0
