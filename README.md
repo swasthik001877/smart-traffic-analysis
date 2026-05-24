@@ -40,18 +40,6 @@ Smart Traffic Analysis System is a desktop application for real-time traffic mon
 
 ---
 
-## Screenshots
-
-> _Add screenshots of your GUI here_
-
-```
-[Video feed panel]  [Route advisory panel]
-[Stats bar — count / density / congestion / speed / FPS]
-[Vehicle distribution chart]  [System log]
-```
-
----
-
 ## Table of Contents
 
 - [Quick Start](#quick-start)
