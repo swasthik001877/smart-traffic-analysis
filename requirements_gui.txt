@@ -1,22 +1,45 @@
-# Smart Traffic Analysis System — All dependencies
-# Run: pip install -r requirements_gui.txt
+# Smart Traffic Analysis System — Requirements
+# Optimised for: Ryzen 5 5600X + RTX 3050 (CUDA 12.1)
+#
+# INSTALL ORDER MATTERS — run setup.bat which handles this automatically.
+# Or manually:
+#   1. pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
+#   2. pip install -r requirements_gui.txt
 
-# GUI & image display
+# ── Core AI / Detection ───────────────────────────────────────────────────────
+# Ultralytics handles YOLO11, YOLOv8, auto-download, ByteTracker, TensorRT export
+ultralytics>=8.3.0
+
+# PyTorch — install CUDA version via setup.bat, not from here
+# (pip from this file gives CPU-only torch)
+# torch>=2.1.0       <- installed by setup.bat with CUDA 12.1
+# torchvision>=0.16  <- installed by setup.bat
+
+# ── OpenCV ────────────────────────────────────────────────────────────────────
+# contrib needed for CUDA dnn backend (legacy YOLOv3 fallback)
+opencv-contrib-python>=4.8.0
+
+# ── GUI ───────────────────────────────────────────────────────────────────────
 Pillow>=10.0.0
-
-# Computer vision + YOLO detection
-opencv-python>=4.8.0
-numpy>=1.24.0
-
-# Database
-psycopg2-binary>=2.9.6
-
-# Charts + PDF report
 matplotlib>=3.7.0
 
-# YouTube live stream support
+# ── Database ──────────────────────────────────────────────────────────────────
+psycopg2-binary>=2.9.0     # PostgreSQL (not needed for SQLite mode)
+
+# ── Config / Environment ──────────────────────────────────────────────────────
+python-dotenv>=1.0.0
+
+# ── YouTube Live streams ──────────────────────────────────────────────────────
 yt-dlp>=2024.1.0
 
-# Utilities
-python-dotenv>=1.0.0
+# ── Windows alerts ────────────────────────────────────────────────────────────
+winotify>=1.1.0; sys_platform == "win32"
+
+# ── Progress bars ─────────────────────────────────────────────────────────────
 tqdm>=4.65.0
+
+# ── TensorRT (optional — for maximum GPU speed) ───────────────────────────────
+# TensorRT is installed automatically with CUDA toolkit, OR via:
+#   pip install tensorrt  (requires CUDA drivers already installed)
+# The app exports YOLO11 to TensorRT via ultralytics built-in export —
+# no separate tensorrt pip package required if CUDA drivers are present.

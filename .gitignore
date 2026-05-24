@@ -1,61 +1,48 @@
-# ── Virtual Environment ──────────────────────────────────────────
-venv/
-.venv/
-env/
-ENV/
-
-# ── Python Cache ─────────────────────────────────────────────────
+# Python
 __pycache__/
 *.py[cod]
 *.pyo
 *.pyd
-*.pyc
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
 
-# ── YOLO / ML Model Weights (large files, auto-downloaded) ───────
-*.pt
-*.pth
-*.weights
-*.onnx
-*.engine
-
-# ── Video / Image files ──────────────────────────────────────────
-*.mp4
-*.avi
-*.mov
-*.mkv
-*.jpg
-*.jpeg
-*.png
-*.gif
-
-# ── Database & Secrets ───────────────────────────────────────────
+# Environment
 .env
-*.env
+.venv/
+venv/
+env/
+
+# YOLO model weights — large binary files, never commit
+models/*.weights
+models/*.pt
+models/*.onnx
+
+# Keep cfg and names files (small, needed)
+!models/*.cfg
+!models/*.names
+
+# Output files
+output/
+*.pdf
+
+# Camera session persistence (user-specific)
+cameras.json
+
+# SQLite database (user data)
 *.db
 *.sqlite3
-config.ini
-secrets.py
 
-# ── PDF Reports (generated at runtime) ───────────────────────────
-*.pdf
-reports/
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
 
-# ── Logs ─────────────────────────────────────────────────────────
-*.log
-logs/
-
-# ── OS Files ─────────────────────────────────────────────────────
+# OS
 .DS_Store
 Thumbs.db
 desktop.ini
-
-# ── IDE / Editor ─────────────────────────────────────────────────
-.vscode/
-.idea/
-*.suo
-*.user
-
-# ── Build / Dist ─────────────────────────────────────────────────
-build/
-dist/
-*.egg-info/
